@@ -1,0 +1,39 @@
+<div class="card">
+    <div class="card-header">
+      Lista de Platillos </div>
+    <div class="card-body">
+       
+          <a class="nav-link"  routerLink="/platillos/guardar"><i class="fas fa-plus-circle"></i> Nuevo Platillo</a>
+     <br>
+        
+      <table class="table caption-top">
+        <caption></caption>
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">NOMBRE</th>
+            <th scope="col">PRECIO</th>
+            <th scope="col">CANTIDAD</th>
+            <th scope="col">DESCRIPCION</th>
+            <th scope="col">IMAGEN</th>
+            <th scope="col" class="text-center">ACCIONES</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let platillo of platillos">
+            <td>{{platillo.cod_platillo}}</td>
+            <td>{{platillo.nombre}}</td>
+            <td>{{platillo.precio}}</td>
+            <td>{{platillo.cantidad}}</td>
+            <td>{{platillo.descripcion}}</td>
+            <td>{{platillo.imagen}}</td>
+            <td class="text-center">
+                <button class="btn btn-outline-primary" routerLink="/platillos/detalle/{{platillo.cod_platillo}}" style="margin-left : 10px;"><i class="far fa-eye"></i> Ver</button>
+                <button class="btn btn-outline-warning" routerLink="/platillos/editar/{{platillo.cod_platillo}}" style="margin-left : 10px;"><i class="far fa-edit"></i> Editar</button>
+                <button class="btn btn-outline-danger" (click)="borrar(platillo.cod_platillo)" style="margin-left : 10px;"><i class="far fa-trash-alt"></i> Eliminar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

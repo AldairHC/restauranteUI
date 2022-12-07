@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-4 mx-auto">
+            <form (ngSubmit)="crearPlatillos()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre"
+                    [(ngModel)]="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="number">Precio</label>
+                    <input type="text" class="form-control" id="precio" name="precio"
+                    [(ngModel)]="precio" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="number">Cantidad</label>
+                    <input type="text" class="form-control" id="cantidad" name="cantidad"
+                    [(ngModel)]="cantidad" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="descripcion">Descripcion</label>
+                    <input type="text" class="form-control" id="descripcion" name="descripcion"
+                    [(ngModel)]="descripcion" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="imagen">Imagen</label>
+                    <input type="text" class="form-control" id="imagen" name="imagen"
+                    [(ngModel)]="imagen" required>
+                </div>
+                <button class="btn btn-outline-success btn-block">Guardar</button>
+            </form>
+        </div>
+    </div>
+</div>

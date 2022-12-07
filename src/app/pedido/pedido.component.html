@@ -1,0 +1,41 @@
+<div class="card">
+    <div class="card-header">
+      Lista de Pedidos </div>
+    <div class="card-body">
+
+          <a class="nav-link"  routerLink="/platillos/guardar"><i class="fas fa-plus-circle"></i> Nuevo Platillo</a>
+     <br>
+
+      <table class="table caption-top">
+        <caption></caption>
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">CANTIDAD</th>
+            <th scope="col">PRECIO</th>
+            <th scope="col">PLATILLO</th>
+            <th scope="col">CLIENTE</th>
+            <th scope="col">Nº MESA</th>
+            <th scope="col">COCINERO</th>
+            <th scope="col">MOZO</th>
+            <th scope="col" class="text-center">ACCIONES</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let pedidos of pedido">
+            <td>{{pedidos.idpedido}}</td>
+            <td>{{pedidos.cantidad}}</td>
+            <td>{{pedidos.precio}}</td>
+            <td>{{pedidos.platillo.nombre}}</td>
+            <td>{{pedidos.cliente.nombre}}</td>
+            <td>{{pedidos.mesa.num_mesa}}</td>
+            <td>{{pedidos.cocinero.nombre}}</td>
+            <td>{{pedidos.mozo.nombre}}</td>
+            <td class="text-center">
+
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
